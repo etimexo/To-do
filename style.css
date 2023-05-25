@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  body {
+    background: linear-gradient(300deg, #153677,  #4e085f);
+    min-width: 400px;
+  }
+  #container {
+    width: 100%;
+    max-width: 80%;
+    min-height: 90vh;
+    text-align: center;
+    margin: 5% auto;
+  }
+  #name {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 3%;
+  }
+  #app {
+    width: 70%;
+    margin: 5% auto;
+    min-width: 60%;
+    min-height: 350px;
+    background-color: #fff;
+    outline: 1px solid rgb(238, 230, 230);
+    border-radius: 20px;
+    padding: 8% 5%;
+  }
+  input, button {
+    border-radius: 5px;
+  }
+  #add-btn {
+    background-color: rgb(102, 37, 206);
+    border: none;
+    color: #fff;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  input {
+    width: 80%;
+    line-height: 20px;
+    border: .2px solid rgb(211, 205, 205);
+    padding: 2%;
+  }
+  ul {
+    margin-top: 7px;
+  }
+  ul li {
+    margin-top: 5%;
+    list-style-type: none;
+    font-size: 1.2rem;
+    color: #050202;
+    font-weight: bolder;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3% 2%;
+    left: 20px;
+  }
+  ul li::before {
+    content: '';
+    background-image: url(Images/unchecked.jpg);
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    background-size: cover;
+    background-position: center;
+    margin-left: 5px;
+    left: -5%;
+    top: 32%;
+    border-radius: 50%;
+  }
+  ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+  }
+  ul li.checked::before{
+    background-image: url(images/check.jpg);
+  }
+  ul li:hover {
+    background-color: #e3e6ec;
+    border-radius: 8px;
+    width: 98%;
+  }
+  ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 2.1rem;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+  }
+  ul li span:hover {
+    background-color: #b1b3b9;
+    transition: .5s ease;
+  }
+  #add-btn:hover {
+    background-color: rgb(85, 28, 179);
+  }
+  #add-btn:active {
+    background-color: rgb(61, 16, 133);
+  }
+  @media only screen and (max-width: 700px) {
+    body {
+      width: 100%;
+      min-width: 300px;
+    }
+    #container {
+      width: 100%;
+    }
+    #app {
+      width: 100%;
+    }
+    #row {
+      margin-top: 5%;
+      min-width: 80%;
+      padding-left: 1%;
+    }
+    #add-btn {
+      width: 80%;
+      height: 20%;
+      margin-top: 4%;
+      font-size: 1.5rem;
+      padding: 2%;
+    }
+    #del-btn {
+      background: linear-gradient(90deg, rgb(119, 29, 29), rgb(175, 40, 40));
+      opacity: 1;
+      margin-top: 5%;
+      width: 80%;
+      height: 40px;
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border: none;
+    }
+    #del-btn:hover, #del-btn:focus{
+      cursor: pointer;
+      background: linear-gradient(90deg, rgb(121, 22, 22), rgb(175, 40, 40));
+    }
+    ul li::before {
+      /* margin-left: 30px; */
+      left: -10%;
+    }
+  }
+  @media only screen and (min-width:700px) {
+    #row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 5%;
+    }
+    #add-btn {
+      width: 18%;
+      height: 45px;
+    }
+    #del-btn {
+      background: linear-gradient(1300deg, #153677,  #4e085f);
+      margin-top: 2%;
+      width: 70%;
+      height: 50px;
+      font-size: 1.5rem;
+      color: white;
+      font-weight: bold;
+    }
+    #del-btn:hover {
+      transition: .5s;
+      transform: scale(0.955);
+      cursor: pointer;
+    }
+  }
